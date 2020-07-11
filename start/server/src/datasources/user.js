@@ -1,5 +1,7 @@
-const { DataSource } = require('apollo-datasource');
 const isEmail = require('isemail');
+const mime = require('mime');
+const uuidv4 = require('uuid/v4');
+const { DataSource } = require('apollo-datasource');
 
 class UserAPI extends DataSource {
   constructor({ store }) {
@@ -79,5 +81,5 @@ class UserAPI extends DataSource {
     return found && found.length > 0;
   }
 }
-
+    
 module.exports = UserAPI;
